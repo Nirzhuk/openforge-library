@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const isDev = process.env.NODE_ENV !== 'production'
 
+console.log(isDev)
 module.exports = {
   reactStrictMode: true,
   // Use the prefix in production and not development.

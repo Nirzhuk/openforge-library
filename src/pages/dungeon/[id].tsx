@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import React from 'react'
 import HeaderPage from '../../components/HeaderPage'
-import TowneData from '../../data/towne/main.json'
+import TowneData from '../../data/dungeon/main.json'
 
 interface TownePageProps {
     data: any;
@@ -10,7 +10,7 @@ interface TownePageProps {
 const TownePage = ({ data }: TownePageProps) => {
     return (
         <div>
-            <HeaderPage data={data} mainName={'Towne'} />
+            <HeaderPage data={data} mainName={'Dungeon'} />
             <div className="grid grid-cols-1 p-5 gap-4 md:grid-cols-4 container mx-auto my-5">
 
                 {data.images.map((image: any) => {
