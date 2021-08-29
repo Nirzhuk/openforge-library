@@ -5,6 +5,7 @@
         "linkDownload": "thingiverse.com",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto sint nisi neque fugit repudiandae rem iste eaque omnis quisquam corrupti aperiam nostrum veritatis cupiditate corporis nobis vitae, ipsa eius adipisci.",
         "mainImage": "/images/towne/door/double_door_full_stone.jpg",
+        "tags": ["updated_openforge2"],
         "images": [
             {
                 "id": "double_door_full_stone",

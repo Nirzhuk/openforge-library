@@ -36,11 +36,11 @@
                 "name": "Single Door Stucco Stone",
                 "src": "/images/towne/door/single_door_stucco_stone.jpg"
             },
-                        {
-                            "id": "secret_door",
-                            "name": "Secret Door",
-                            "src": "/images/towne/door/secret_door.jpg"
-                        }
+            {
+                "id": "secret_door",
+                "name": "Secret Door",
+                "src": "/images/towne/door/secret_door.jpg"
+            }
         ]
     },
     {

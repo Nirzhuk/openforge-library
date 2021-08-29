@@ -4,7 +4,6 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
-  console.log(process.env.NODE_ENV)
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <h1 className="text-6xl text-shadow-bold text-white uppercase">
           Welcome to Openforge Visual Library
         </h1>
 
