@@ -123,7 +123,7 @@ const Navbar = () => {
                         <ul className="navlist">
                             <li>Documentation</li>
                         </ul>
-                        <p className="subtle">Start integrating Stripe's products and tools.</p>
+                        <p className="subtle">Start integrating Stripe&apos;s products and tools.</p>
                         <div className="two-col">
                             <div>
                                 <h4>Get started</h4>

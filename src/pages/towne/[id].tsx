@@ -76,12 +76,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    try {
-        const id = params?.id
-        const item = TowneData.find((data:any) => data.id === id)
+    const id = params?.id
+    const item = TowneData.find((data: any) => data.id === id)
 
-        return { props: { data:item } }
-    } catch (err) {
-        return { props: { errors: err.message } }
-    }
+    return { props: { data: item } }
 }
