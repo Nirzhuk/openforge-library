@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import React from 'react'
 import HeaderPage from '../../components/HeaderPage'
-import TowneData from '../../data/dungeon/main.json'
+import DungeonData from '../../data/dungeon/main.json'
 
 interface TownePageProps {
     data: any;
@@ -30,7 +30,6 @@ const TownePage = ({ data }: TownePageProps) => {
                 })
                 }
             </div>
-
         </div>
     )
 }
@@ -39,7 +38,7 @@ export default TownePage
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const paths = TowneData.map((type: any) => ({
+    const paths = DungeonData.map((type: any) => ({
         params: { id: type.id.toString() },
     }))
     return { paths, fallback: false }
@@ -48,7 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const id = params?.id
-    const item = TowneData.find((data: any) => data.id === id)
+    const item = DungeonData.find((data: any) => data.id === id)
 
     return { props: { data: item } }
 }
