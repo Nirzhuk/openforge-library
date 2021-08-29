@@ -15,7 +15,7 @@ const TownePage = ({ data }: TownePageProps) => {
 
                     <div className="z-0 order-1 md:order-2 relative w-full md:w-2/5 h-80 md:h-full overflow-hidden rounded-lg md:rounded-none md:rounded-r-lg">
                         <div className="absolute inset-0 w-full h-full object-fill object-center bg-blue-400 bg-opacity-30 bg-cover bg-bottom"
-                            style={{ backgroundImage: ` url( ${data.mainImage} )`, backgroundBlendMode: 'multiply' }}>
+                            style={{ backgroundImage: ` url(/openforge-library/${data.mainImage} )`, backgroundBlendMode: 'multiply' }}>
 
                         </div>
                         <div className="md:hidden absolute inset-0 h-full p-6 pb-6 flex flex-col-reverse justify-start items-start bg-gradient-to-b from-transparent via-transparent to-gray-900">
@@ -45,7 +45,7 @@ const TownePage = ({ data }: TownePageProps) => {
                 {data.images.map((image: any) => {
                         return (
                             <div key={image.id} className="flex flex-col justify-center items-center max-w-sm  my-8">
-                                <div style={{ backgroundImage: `url(${image.src})` }}
+                                <div style={{ backgroundImage: `url(/openforge-library/${image.src})` }}
                                     className="w-80 bg-gray-300 h-64 w-full rounded-lg shadow-md bg-cover bg-center"></div>
                                 <div className="w-80 md:w-80 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden">
                                     <div className="py-2 text-center font-bold uppercase tracking-wide text-gray-800">{image.name}</div>
