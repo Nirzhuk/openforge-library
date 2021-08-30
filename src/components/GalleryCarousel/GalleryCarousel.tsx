@@ -69,7 +69,7 @@ const GalleryCarousel = ({ slides }: GalleryCarouselProps) => {
                                     height={295}
                                     width={363}
                                     src={slide.src}
-                                    alt="A cool cat."
+                                    alt={slide.src}
                                 />
                             </div>
                         </div>

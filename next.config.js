@@ -12,5 +12,4 @@ module.exports = {
   // Use the prefix in production and not development.
   assetPrefix: isDev ? '' : '/openforge-library/',
   basePath: isDev ? '' : '/openforge-library',
-  ...imagesProdLoader
 }
