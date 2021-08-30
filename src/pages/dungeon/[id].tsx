@@ -14,12 +14,6 @@ const TownePage = ({ data }: TownePageProps) => {
             <HeaderPage data={data} mainName={'Dungeon'} />
             <div className="grid grid-cols-1 p-5 gap-4 md:grid-cols-4 container mx-auto my-5">
 
-                {data.images.map((image: any) => {
-                    return (
-                        <Card key={image.id} image={image}/>
-                    )
-                })
-                }
             </div>
         </div>
     )
