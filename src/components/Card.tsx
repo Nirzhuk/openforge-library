@@ -1,9 +1,13 @@
 import React from 'react'
 import assetEnvUrl from '../libs/assetUrl'
+import { Tile } from '../utils/types'
 import GalleryCarousel from './GalleryCarousel'
 
-const Card = ({ item }: any) => {
-    console.log(item)
+interface CardProps {
+    item: Tile;
+}
+
+const Card = ({ item }: CardProps) => {
     return (
         <div key={item.id} className="flex flex-col justify-center items-center max-w-sm  my-8 relative">
 

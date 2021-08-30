@@ -3,9 +3,10 @@ import React from 'react'
 import Card from '../../components/Card'
 import HeaderPage from '../../components/HeaderPage'
 import DungeonData from '../../data/dungeon/main.json'
+import { Category, Tile } from '../../utils/types'
 
 interface TownePageProps {
-    data: any;
+    data: Category<Tile>;
 }
 
 const TownePage = ({ data }: TownePageProps) => {
@@ -13,7 +14,12 @@ const TownePage = ({ data }: TownePageProps) => {
         <div>
             <HeaderPage data={data} mainName={'Dungeon'} />
             <div className="grid grid-cols-1 p-5 gap-4 md:grid-cols-4 container mx-auto my-5">
-
+                {data.items.map((item: Tile) => {
+                    return (
+                        <Card key={item.id} item={item}/>
+                    )
+                })
+                }
             </div>
         </div>
     )
@@ -23,8 +29,8 @@ export default TownePage
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const paths = DungeonData.map((type: any) => ({
-        params: { id: type.id.toString() },
+    const paths = DungeonData.map((category: any) => ({
+        params: { id: category.id.toString() },
     }))
     return { paths, fallback: false }
 }

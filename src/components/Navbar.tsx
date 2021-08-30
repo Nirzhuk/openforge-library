@@ -5,7 +5,7 @@ import useOutsideClick from '../hooks/useClickOutside'
 
 
 
-const categories = [
+const categories: CategoryLink[] = [
     {
         id: 'dungeon',
         link: '/dungeon',
@@ -117,13 +117,29 @@ const categories = [
     }
 
 ]
+interface Subcategory {
+    id: string,
+    link: string,
+    text: string
+}
 
-const CustomLink = ({category}:any) => {
+interface CategoryLink {
+    id: string,
+    link: string,
+    text: string,
+    isDropdown: boolean,
+    subCategories?: Subcategory[]
+}
+interface CustomLinkProps {
+    category: CategoryLink,
+}
+
+const CustomLink = ({ category }: CustomLinkProps) => {
     const router = useRouter()
     const ref = useRef(null)
     const [openDrowndown, setOpenDrowdown] = useState(false)
     const onClose = () => setOpenDrowdown(false);
-    useOutsideClick(ref,onClose)
+    useOutsideClick(ref, onClose)
     if (category.isDropdown) {
         return (
             <div className="relative">
@@ -134,15 +150,15 @@ const CustomLink = ({category}:any) => {
                 {openDrowndown && (
                     <div ref={ref} className="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-20">
                         <div className="px-2 py-2 border border-gray-500 bg-white rounded-md shadow dark-mode:bg-gray-800  z-20">
-                            {category.subCategories.map((subCategory:any) => (
+                            {category.subCategories && category.subCategories.map((subCategory: Subcategory) => (
                                 <Link href={subCategory.link} key={subCategory.id}>
                                     <a className="block px-4 py-2 mt-2 text-sm font-semibold mb-1 bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
                                         {subCategory.text}
-                                        </a>
+                                    </a>
                                 </Link>
                             ))}
                         </div>
-                        
+
                     </div>
                 )}
             </div >
@@ -159,7 +175,7 @@ const CustomLink = ({category}:any) => {
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
-    
+
     return (
 
         <header className="relative w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">

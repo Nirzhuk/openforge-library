@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useEmblaCarousel } from "embla-carousel/react";
+import { Image as IImage } from "../../utils/types";
 
+interface ButtonProps {
+    enabled: boolean;
+    onClick: () => void;
+}
 
-export const PrevButton = ({ enabled, onClick }: any) => (
+export const PrevButton = ({ enabled, onClick }: ButtonProps) => (
     <button
         className="embla__button embla__button--prev"
         onClick={onClick}
@@ -15,7 +20,7 @@ export const PrevButton = ({ enabled, onClick }: any) => (
     </button>
 );
 
-export const NextButton = ({ enabled, onClick }: any) => (
+export const NextButton = ({ enabled, onClick }: ButtonProps) => (
     <button
         className="embla__button embla__button--next"
         onClick={onClick}
@@ -28,8 +33,11 @@ export const NextButton = ({ enabled, onClick }: any) => (
 );
 
 
+interface GalleryCarouselProps {
+    slides: IImage[];
+}
 
-const GalleryCarousel = ({ slides }:any) => {
+const GalleryCarousel = ({ slides }: GalleryCarouselProps) => {
     const [viewportRef, embla] = useEmblaCarousel({ draggable: false});
     const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
     const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -54,7 +62,7 @@ const GalleryCarousel = ({ slides }:any) => {
             <div className="embla w-80 bg-white h-64 w-full rounded-lg shadow-md bg-cover bg-center overflow-hidden	">
                 <div className="embla__viewport" ref={viewportRef}>
                     <div className="embla__container h-full">
-                        {slides.map((slide: any, index: number) => (
+                        {slides.map((slide: IImage, index: number) => (
                         <div className="embla__slide" key={index}>
                             <div className="embla__slide__inner">
                                 <Image

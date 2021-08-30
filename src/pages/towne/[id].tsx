@@ -3,9 +3,10 @@ import React from 'react'
 import Card from '../../components/Card'
 import HeaderPage from '../../components/HeaderPage'
 import TowneData from '../../data/towne/main.json'
+import { Category, Tile } from '../../utils/types'
 
 interface TownePageProps {
-    data: any;
+    data: Category<Tile>;
 }
 
 const TownePage = ({ data }: TownePageProps) => {
@@ -14,7 +15,7 @@ const TownePage = ({ data }: TownePageProps) => {
             <HeaderPage data={data} mainName={'Towne'} />
             <div className="grid grid-cols-1 p-5 gap-4 md:grid-cols-4 container mx-auto my-5">
 
-                {data.items.map((item: any) => {
+                {data.items.map((item: Tile) => {
                     return (
                         <Card key={item.id} item={item} />
                     )

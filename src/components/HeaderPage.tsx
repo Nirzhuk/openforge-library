@@ -1,7 +1,13 @@
 import React from 'react'
 import assetEnvUrl from '../libs/assetUrl'
+import { Category, Tile } from '../utils/types'
 
-const HeaderPage = ({data,mainName}:any) => {
+interface HeaderPageProps { 
+    data: Category<any>;
+    mainName: string;
+}
+
+const HeaderPage = ({ data, mainName }: HeaderPageProps) => {
     return (
         <div className="container mx-auto mt-20">
             <div className="relative rounded-lg flex flex-col md:flex-row items-center shadow-xl md:h-72 mx-2">
