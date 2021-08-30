@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useEmblaCarousel } from "embla-carousel/react";
@@ -65,7 +66,7 @@ const GalleryCarousel = ({ slides }: GalleryCarouselProps) => {
                         {slides.map((slide: IImage, index: number) => (
                         <div className="embla__slide" key={index}>
                             <div className="embla__slide__inner">
-                                <Image
+                                <img
                                     height={295}
                                     width={363}
                                     src={slide.src}

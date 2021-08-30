@@ -3,8 +3,7 @@ const isDev = process.env.NODE_ENV !== 'production'
 
 const imagesProdLoader = isDev ? {} : {
   images: { //https://github.com/vercel/next.js/issues/21079
-    loader: "imgix",
-    path: "https://noop/"
+    loader: "default",
   }
 }
 module.exports = {
