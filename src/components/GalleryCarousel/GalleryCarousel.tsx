@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useEmblaCarousel } from "embla-carousel/react";
 import { Image as IImage } from "../../utils/types";
+import { srcEnvUrl } from "../../libs/assetUrl";
 
 interface ButtonProps {
     enabled: boolean;
@@ -39,7 +40,7 @@ interface GalleryCarouselProps {
 }
 
 const GalleryCarousel = ({ slides }: GalleryCarouselProps) => {
-    const [viewportRef, embla] = useEmblaCarousel({ draggable: false});
+    const [viewportRef, embla] = useEmblaCarousel({ draggable: false });
     const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
     const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
 
@@ -64,16 +65,16 @@ const GalleryCarousel = ({ slides }: GalleryCarouselProps) => {
                 <div className="embla__viewport" ref={viewportRef}>
                     <div className="embla__container h-full">
                         {slides.map((slide: IImage, index: number) => (
-                        <div className="embla__slide" key={index}>
-                            <div className="embla__slide__inner">
-                                <img
-                                    height={295}
-                                    width={363}
-                                    src={slide.src}
-                                    alt={slide.src}
-                                />
+                            <div className="embla__slide" key={index}>
+                                <div className="embla__slide__inner">
+                                    <img
+                                        height={295}
+                                        width={363}
+                                        src={`${srcEnvUrl}${slide.src}`}
+                                        alt={slide.src}
+                                    />
+                                </div>
                             </div>
-                        </div>
                         ))}
                     </div>
                 </div>
