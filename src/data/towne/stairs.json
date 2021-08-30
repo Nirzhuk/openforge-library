@@ -1,0 +1,35 @@
+{
+    "id": "stairs",
+    "name": "Stairs",
+    "linkDownload": "thingiverse.com",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto sint nisi neque fugit repudiandae rem iste eaque omnis quisquam corrupti aperiam nostrum veritatis cupiditate corporis nobis vitae, ipsa eius adipisci.",
+    "mainImage": "/images/towne/stairs/stairs_main.jpg",
+    "items": [
+        {
+            "id": "stairs_stucco",
+            "name": "Stairs Stucco",
+            "isCarousel": true,
+            "images": [
+                {
+                    "src": "/images/towne/stairs/stairs_stucco.jpg"
+                },
+                {
+                    "src": "/images/towne/stairs/stairs_stucco_2.jpg"
+                }
+            ]
+        },
+        {
+            "id": "stairs_stone",
+            "name": "Stairs Stone",
+            "isCarousel": true,
+            "images": [
+                {
+                    "src": "/images/towne/stairs/stairs_stone.jpg"
+                },
+                {
+                    "src": "/images/towne/stairs/stairs_stone_2.jpg"
+                }
+            ]
+        }
+    ]
+}

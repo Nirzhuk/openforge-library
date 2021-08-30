@@ -7,3 +7,26 @@ This project to help the community of Openforge searching and easy way to naviga
 
 `Next.JS, ReactJS, TailwindCSS,Typescript, Github Actions(CI)`
 
+
+
+# TODO
+
+
+- Towne
+    -
+
+- Dungeon Stone
+
+- Cut stone
+
+- Sewers
+
+- Mines
+
+- Facades
+
+- Community
+
+- Accessories
+
+- Tools

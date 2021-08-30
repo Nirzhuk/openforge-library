@@ -40,7 +40,7 @@ const HeaderPage = ({ data, mainName }: HeaderPageProps) => {
                             <h2 className="hidden md:block text-2xl text-gray-400 mx-8">{data.name}</h2>
                         </div>
                         <p className="text-gray-600 text-justify">{data.description}</p>
-                        <a className="w-40  h-11 text-center text-xl uppercase bg-purple-600 transform transition duration-400 hover:bg-purple-500 rounded text-white py-2 px-4 shadow" href={data.linkDownload}>
+                        <a className="w-40  h-11 text-center text-xl uppercase bg-purple-600 transform transition duration-400 hover:bg-purple-500 rounded text-white py-2 px-4 shadow" href={data.downloadLink}>
                             <span>Download</span>
                         </a>
                     </div>

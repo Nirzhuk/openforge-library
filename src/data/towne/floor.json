@@ -1,0 +1,29 @@
+{
+    "id": "floor",
+    "name": "Floor",
+    "linkDownload": "thingiverse.com",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto sint nisi neque fugit repudiandae rem iste eaque omnis quisquam corrupti aperiam nostrum veritatis cupiditate corporis nobis vitae, ipsa eius adipisci.",
+    "mainImage": "/images/towne/floor/floor_2.jpg",
+    "items": [
+        {
+            "id": "floor-tile",
+            "name": "Floor",
+            "mainImage": "",
+            "isCarousel": true,
+            "images": [
+                {
+                    "src": "/images/towne/floor/floor_1.jpg"
+                },
+                {
+                    "src": "/images/towne/floor/floor_2.jpg"
+                },
+                {
+                    "src": "/images/towne/floor/floor_3.jpg"
+                },
+                {
+                    "src": "/images/towne/floor/floor_4.jpg"
+                }
+            ]
+        }
+    ]
+}

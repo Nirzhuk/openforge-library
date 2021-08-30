@@ -2,7 +2,7 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import React from 'react'
 import Card from '../../components/Card'
 import HeaderPage from '../../components/HeaderPage'
-import DungeonData from '../../data/dungeon/main.json'
+import DungeonData from '../../data/dungeon/main'
 import { Category, Tile } from '../../utils/types'
 
 interface TownePageProps {
@@ -11,7 +11,7 @@ interface TownePageProps {
 
 const TownePage = ({ data }: TownePageProps) => {
     return (
-        <div>
+        <div className="h-screen">
             <HeaderPage data={data} mainName={'Dungeon'} />
             <div className="grid grid-cols-1 p-5 gap-4 md:grid-cols-4 container mx-auto my-5">
                 {data.items.map((item: Tile) => {

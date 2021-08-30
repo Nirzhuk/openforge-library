@@ -2,7 +2,7 @@
 export interface Category<T> {
     id: string;
     name: string;
-    linkDownload: string;
+    downloadLink: string;
     description: string;
     mainImage: string;
     items: T[];
@@ -19,4 +19,5 @@ export interface Tile {
 }
 export interface Image {
     src: string;
+    downloadLink: string;
 }
