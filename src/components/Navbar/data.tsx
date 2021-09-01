@@ -72,7 +72,19 @@ const categories = [
         id: 'sewers',
         link: '/sewers',
         text: 'Sewers',
-        isDropdown: false,
+        isDropdown: true,
+        subCategories: [
+            {
+                id: 'floor',
+                link: '/sewers/floor',
+                text: 'Floor'
+            },
+            {
+                id: 'wall',
+                link: '/sewers/wall',
+                text: 'Wall'
+            },
+        ]
     },
     {
         id: 'rough-stone',

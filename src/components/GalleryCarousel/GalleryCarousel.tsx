@@ -68,8 +68,8 @@ const GalleryCarousel = ({ slides }: GalleryCarouselProps) => {
                             <div className="embla__slide" key={index}>
                                 <div className="embla__slide__inner">
                                     <img
-                                        height={295}
-                                        width={363}
+                                    style={{height: '260px',width:'375px'}}
+ 
                                         src={`${srcEnvUrl}${slide.src}`}
                                         alt={slide.src}
                                     />

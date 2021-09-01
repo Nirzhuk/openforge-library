@@ -12,7 +12,7 @@ const HeaderPage = ({ data, mainName }: HeaderPageProps) => {
         <div className="container mx-auto mt-20">
             <div className="relative rounded-lg flex flex-col md:flex-row items-center shadow-xl md:h-72 mx-2">
                 <div className="z-0 order-1 md:order-2 relative w-full md:w-2/5 h-80 md:h-full overflow-hidden rounded-lg md:rounded-none md:rounded-r-lg">
-                    <div className="absolute inset-0 w-full h-full object-fill object-center bg-blue-400 bg-opacity-30 bg-cover bg-bottom"
+                    <div className="absolute inset-0 w-full h-full object-fill object-center bg-blue-400 bg-opacity-30 bg-cover bg-center"
                         style={{ backgroundImage: ` url(${assetEnvUrl}${data.mainImage} )`, backgroundBlendMode: 'multiply' }}>
                     </div>
 {/*                     <div className="right-3 hidden md:block bottom-2 absolute z-1">

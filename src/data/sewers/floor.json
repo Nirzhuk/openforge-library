@@ -1,0 +1,60 @@
+{
+    "id": "floor",
+    "name": "Floors Variants",
+    "linkDownload": "thingiverse.com",
+    "description": "This is actually on very active development so it will change maybe every month :)",
+    "mainImage": "/images/sewers/floor/sluice/sluice_3.jpg",
+    "items": [
+        {
+            "id": "sluice",
+            "name": "Sluice ",
+            "mainImage": "",
+            "isCarousel": true,
+            "images": [
+                {
+                    "src": "/images/sewers/floor/sluice/sluice_1.jpg"
+                },
+                {
+                    "src": "/images/sewers/floor/sluice/sluice_2.jpg"
+                },
+                {
+                    "src": "/images/sewers/floor/sluice/sluice_3.jpg"
+                },
+                {
+                    "src": "/images/sewers/floor/sluice/sluice_4.jpg"
+                }
+            ]
+        },
+        {
+            "id": "riser",
+            "name": "Riser",
+            "mainImage": "",
+            "isCarousel": true,
+            "images": [
+                {
+                    "src": "/images/sewers/floor/riser/riser_1.jpg"
+                },
+                {
+                    "src": "/images/sewers/floor/riser/riser_2.jpg"
+                }
+            ]
+        },
+        {
+            "id": "floor",
+            "name": "Floor",
+            "mainImage": "",
+            "isCarousel": true,
+            "images": [
+                {
+                    "src": "/images/sewers/floor/floor/floor_1.jpg"
+                },
+                {
+                    "src": "/images/sewers/floor/floor/floor_2.jpg"
+                },
+                {
+                    "src": "/images/sewers/floor/floor/floor_3.jpg"
+                }
+            ]
+        }
+    ]
+}
